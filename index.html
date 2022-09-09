@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tictactoe attempt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="title-text"><strong>Tic-Tac-Toe</strong> <p style="font-size: 1.25vw; display: inline;">by Micheal</p></div>
+
+    <div class="wrapper">
+        <div class="options">
+            <fieldset class="player">
+                <legend><h4>game mode</h4></legend>
+                <div class="choice">
+                    <input type="radio" id="human" name="game-mode" value="human" checked>
+                    <label for="human">vs. human</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="cpu" name="game-mode" value="cpu">
+                    <label for="cpu">vs. CPU</label>
+                </div>
+            </fieldset>
+            <fieldset class="difficulty">
+                <legend><h4>CPU difficulty</h4></legend>
+                <div class="choice">
+                    <input type="radio" id="easy" name="difficulty" value="easy" checked>
+                    <label for="winnable">easy</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="medium" name="difficulty" value="medium">
+                    <label for="cpu">medium</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="hard" name="difficulty" value="hard">
+                    <label for="cpu">hard</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="impossible" name="difficulty" value="impossible">
+                    <label for="cpu">impossible</label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="gameboard">
+            <div class="cell">
+                <h1></h1>
+                <span class="bottom"></span>
+                <span class="right"></span>
+            </div>
+            <div class="cell">
+                <h1></h1>
+            </div>
+            <div class="cell">
+                <span class="left" style="top: auto; bottom: 0;"></span>
+                <span class="bottom" style="right: auto; left: 0;"></span>
+                <h1></h1>
+            </div>
+            <div class="cell">
+                <h1></h1>
+            </div>
+            <div class="cell center">
+                <span class="top"></span>
+                <span class="left"></span>
+                <span class="bottom"></span>
+                <span class="right"></span>
+                <h1></h1>
+            </div>
+            <div class="cell">
+                <h1></h1>
+            </div>
+            <div class="cell">
+                <span class="top" style="left: auto; right: 0;"></span>
+                <span class="right" style="bottom: auto; top: 0;"></span>
+                <h1></h1>
+            </div>
+            <div class="cell">
+                <h1></h1>
+            </div>
+            <div class="cell">
+                <span class="top" style="left:0; right: auto;"></span>
+                <span class="left"></span>
+                <h1></h1>
+            </div>
+        </div>
+        <div class="result"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'rodin';
+  src: url('FOT-Rodin\ Pro\ EB/rodin.otf');
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+body {
+    font-family: 'rodin';
+    margin: 0;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -4%;
+}
+
+.title-text {
+  font-size: 1vw;
+  margin-left: .5%;
+}
+
+.gameboard {
+    transform: rotate(45deg);
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+
+    transition: all 1s ease;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    height: 100%;
+    font-size: 5vw;
+    opacity: 0;
+    height: fit-content;
+}
+
+#played {
+    opacity: 1;
+    transition: all .2s ease-in;
+}
+
+
+
+.bounce {
+    border: solid red 2px;
+    animation-name: bounce;
+    animation-duration: .5s;
+    animation-delay: 0.25s;
+}
+
+.options {
+  bottom: 8%;
+  position: relative;
+  left: -2%;
+  background-color: #EAEAEA;
+  padding: 12px;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  width: 10%;
+  border-radius: 5%;
+  transition: all 1s ease;
+  font-size: 1vw;
+}
+
+.difficulty {
+  border: none;
+}
+
+.player {
+  padding-bottom: 10%;
+}
+
+.options h3 {
+  margin: 0;
+}
+
+
+fieldset {
+  padding: 0;
+  border: 0;
+  border-bottom: solid black 1px;
+  width: fit-content;
+}
+
+fieldset p {
+    font-size: x-small;
+    margin: 0;
+    color: red;
+}
+
+@keyframes bounce {
+    0% {
+      transform: translateY(0px);
+      timing-function: ease-in;
+    }
+    32% {
+      transform: translateY(-12px);
+      timing-function: ease-out;
+    }
+    55% {
+      transform: translateY(12px);
+      timing-function: ease-in;
+    }
+    73% {
+      transform: translateY(-6px);
+      timing-function: ease-out;
+    }
+    82% {
+      transform: translateY(6px);
+      timing-function: ease-in;
+    }
+    91% {
+      transform: translateY(-3px);
+      timing-function: ease-out;
+    }
+    96% {
+      transform: translateY(3px);
+      timing-function: ease-in;
+    }
+    100% {
+      transform: translateY(0px);
+      timing-function: ease-in;
+    }
+  }
+
+
+.cell:hover {
+    cursor: pointer;
+}
+
+.center {
+  box-sizing: border-box;
+}
+
+span {
+  position: absolute;
+}
+
+.top {
+  content: '';
+  border-top: solid black 1px;
+  height: 0px;
+  width: 0px;
+  top: 0%;
+  transition: all 1s ease-out;
+}
+
+.left {
+  width: 0;
+  height: 0px;
+  top: 0;
+  left: 0%;
+  border-left: solid black 1px;
+  border-top: 0;
+  z-index: 1;
+  transition: all 1s ease-out;
+
+}
+
+.bottom {
+  content: '';
+  border-top: solid black 1px;
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  right: 0;
+  z-index: 1;
+  top: 100%;
+  transition: all 1s ease-out;
+}
+
+.right {
+  width: 0px;
+  height: 0px;
+  bottom: -1px;
+  left: 100%;
+  border-left: solid black 1px;
+  border-top: 0;
+  z-index: 1;
+  transition: all 1s ease-out;
+}
+
